@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:github_repo_search/resources/strings.dart';
 import 'package:github_repo_search/styles/colors.dart';
 import 'package:github_repo_search/styles/text_styles.dart';
 
@@ -14,7 +15,7 @@ class ResultsSubtitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        text: 'По запросу: '.toUpperCase(),
+        text: CustomStrings.forQuery.toUpperCase(),
         children: [
           TextSpan(
             text: '"$query"',

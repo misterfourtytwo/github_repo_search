@@ -8,7 +8,7 @@ const TextStyle appBarTextStyle = TextStyle(
   color: MyColors.black,
 );
 
-const TextStyle homeSearchButtonTextStyle = TextStyle(
+const TextStyle buttonTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
   fontSize: 12,
   height: 14 / 12,

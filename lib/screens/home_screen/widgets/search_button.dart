@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_repo_search/resources/strings.dart';
 import 'package:github_repo_search/styles/text_styles.dart';
 
 class SearchButton extends StatelessWidget {
@@ -24,8 +25,8 @@ class SearchButton extends StatelessWidget {
             height: 42,
             child: Center(
               child: Text(
-                'Найти'.toUpperCase(),
-                style: homeSearchButtonTextStyle,
+                CustomStrings.find.toUpperCase(),
+                style: buttonTextStyle,
               ),
             ),
           ),

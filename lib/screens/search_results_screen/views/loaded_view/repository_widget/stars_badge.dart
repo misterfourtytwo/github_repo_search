@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import 'package:github_repo_search/styles/text_styles.dart';
 
 class StarsBadge extends StatelessWidget {

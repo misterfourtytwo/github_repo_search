@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_repo_search/resources/strings.dart';
 import 'package:github_repo_search/screens/home_screen/widgets/search_field.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: Text(
-          'Поиск'.toUpperCase(),
+          CustomStrings.search.toUpperCase(),
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         centerTitle: true,

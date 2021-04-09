@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:github_repo_search/styles/colors.dart';
 
 class UserAvatar extends StatelessWidget {

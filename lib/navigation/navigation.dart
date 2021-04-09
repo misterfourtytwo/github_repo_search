@@ -1,4 +1,4 @@
-import 'dart:io';
+import 'dart:io' show Platform;
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter/cupertino.dart' show CupertinoPageRoute;
