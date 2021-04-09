@@ -79,28 +79,27 @@ class _SearchScreenState extends State<SearchScreen> {
           ResultsSubtitle(query: widget.query),
           SizedBox(height: 8),
           Expanded(
-            child: BlocProvider<SearchResultsBloc>.value(
-              value: bloc,
-              child: BlocBuilder<SearchResultsBloc, SearchResultsState>(
-                builder: (BuildContext context, SearchResultsState state) {
-                  if (state is SearchResultsStateLoaded) {
-                    return SearchResultsLoadedView(
-                      loadedState: state,
-                      loadMoreCallback: _loadMore,
-                      reloadCallback: _reload,
-                    );
-                  } else if (state is SearchResultsStateError) {
-                    return SearchResultsErrorView(
-                      errorState: state,
-                      reloadCallback: _reload,
-                    );
-                  } else {
-                    return SearchResultsLoadingView();
-                  }
-                },
-              ),
+              child: BlocProvider<SearchResultsBloc>.value(
+            value: bloc,
+            child: BlocBuilder<SearchResultsBloc, SearchResultsState>(
+              builder: (BuildContext context, SearchResultsState state) {
+                if (state is SearchResultsStateLoaded) {
+                  return SearchResultsLoadedView(
+                    loadedState: state,
+                    loadMoreCallback: _loadMore,
+                    reloadCallback: _reload,
+                  );
+                } else if (state is SearchResultsStateError) {
+                  return SearchResultsErrorView(
+                    errorState: state,
+                    reloadCallback: _reload,
+                  );
+                } else {
+                  return SearchResultsLoadingView();
+                }
+              },
             ),
-          )
+          )),
         ],
       ),
     );
