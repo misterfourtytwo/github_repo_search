@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:github_repo_search/resources/strings.dart';
-import 'package:intl/intl.dart';
 
 import 'package:github_repo_search/models/github_repository_data.dart';
 import 'package:github_repo_search/styles/colors.dart';
@@ -15,8 +14,6 @@ class RepositoryWidget extends StatelessWidget {
     Key? key,
     required this.data,
   }) : super(key: key);
-
-  static final dateFormatter = DateFormat('d MMMM', 'ru_RU');
 
   final GithubRepositoryData data;
 
@@ -87,8 +84,7 @@ class RepositoryWidget extends StatelessWidget {
                     text: CustomStrings.updated,
                     children: [
                       TextSpan(
-                        text:
-                            '${data.updatedAt != null ? dateFormatter.format(data.updatedAt!) : 'Неизвестно'}',
+                        text: CustomStrings.updatedAt(data.updatedAt),
                         style: searchResultsSubtitleTextStyle.copyWith(
                           color: MyColors.black,
                         ),
